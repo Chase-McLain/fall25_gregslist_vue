@@ -8,6 +8,11 @@ import { Pet } from "@/models/Pet.js"
 
 
 class PetsService{
+async createPet(petData) {
+   const response = await api.post('api/pets', petData)
+   const pet = new Pet(response.data)
+   AppState.pets.push(pet)
+ }
  async getPets() {
     const response = await api.get('api/pets')
     // logger.log(response)
