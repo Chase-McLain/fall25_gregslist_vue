@@ -30,12 +30,13 @@ watch(theme, () => {
       </button>
       <!-- collapsing menu -->
       <div class="collapse navbar-collapse " id="navbar-links">
-        <ul class="navbar-nav">
+        <ul class="navbar-nav gap-2">
           <RouterLink :to="{ name: 'Car Listings' }">
             <li class="text-gregslist-green">Cars</li>
           </RouterLink>
-
-          <li class="text-gregsist-green">Pets</li>
+          <RouterLink :to="{ name: 'Pet Listings'}">
+            <li class="text-gregsist-green">Pets</li>
+          </RouterLink>
         </ul>
         <!-- LOGIN COMPONENT HERE -->
         <div class="ms-auto">
