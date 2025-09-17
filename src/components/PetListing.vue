@@ -39,7 +39,10 @@ const props = defineProps({
     <p class="m-0">Species: {{ petProp.species }}</p>
     <p class="m-0">Status: {{ petProp.status }}</p>
     <p class="m-0">Vaccinated: {{ petProp.isVaccinated }} </p>
-    <p class="m-0">Enjoys: {{ petProp.likes }}</p>
+    <p class="m-0">Enjoys:</p>
+    <div v-for="like in petProp.likes" :key="petProp.id + '-' +like">
+      <p class="m-0">{{ like }}</p>
+    </div>
     <button v-if="account.id == petProp.creatorId" @click="deletePet()" class="btn btn-outline-danger mt-2">DELETE</button>
   </div>
 </template>
