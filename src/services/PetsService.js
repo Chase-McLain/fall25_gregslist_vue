@@ -10,10 +10,10 @@ import { Pet } from "@/models/Pet.js"
 class PetsService{
  async getPets() {
     const response = await api.get('api/pets')
-    logger.log(response)
+    // logger.log(response)
     const pets = response.data.map((pet)=> new Pet(pet))
     AppState.pets = pets
-    logger.log(AppState.pets)
+    // logger.log(AppState.pets)
   }
 
 
