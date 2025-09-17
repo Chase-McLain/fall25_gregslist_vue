@@ -21,7 +21,7 @@ watch(theme, () => {
     <div class="container gap-2">
       <RouterLink :to="{ name: 'Home' }" class="d-flex align-items-center text-light">
         <img class="navbar-brand" alt="logo" src="/img/cw-logo.png" height="45" />
-        <b class="fs-5">Vue Starter</b>
+        <b class="fs-5">GregsList:</b>
       </RouterLink>
       <!-- collapse button -->
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-links"
@@ -34,6 +34,8 @@ watch(theme, () => {
           <RouterLink :to="{ name: 'Car Listings' }">
             <li class="text-gregslist-green">Cars</li>
           </RouterLink>
+
+          <li class="text-gregsist-green">Pets</li>
         </ul>
         <!-- LOGIN COMPONENT HERE -->
         <div class="ms-auto">
