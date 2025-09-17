@@ -8,6 +8,13 @@ import { Pet } from "@/models/Pet.js"
 
 
 class PetsService{
+ async deletePet(petId) {
+    const response = await api.delete(`api/pets/${petId}`)
+    logger.log('deleted', response.data)
+    const index = AppState.pets.findIndex((pet)=>pet.id == petId)
+    AppState.pets.splice(index, 1)
+  }
+
 async createPet(petData) {
    const response = await api.post('api/pets', petData)
    const pet = new Pet(response.data)

@@ -64,9 +64,9 @@ async function createPet(){
         <label for="pet-status" class="form-label">Status:</label>
         <select v-model="petData.status" id="pet-status" class="form-control" type="text" required>
           <option value="" disabled>Choose a status</option>
-          <option :value="petData.status">adopted</option>
-          <option :value="petData.status">available</option>
-          <option :value="petData.status">pending</option>
+          <option value="adopted">adopted</option>
+          <option value="available">available</option>
+          <option value="pending">pending</option>
         </select>
       </div>
       <div class="col-md-6">
@@ -78,6 +78,11 @@ async function createPet(){
         <label for="pet-img" class="form-label">Pet Picture Url:</label>
         <input v-model="petData.imgUrl" id="pet-img" class="form-control" type="text" required minlength="1"
           maxlength="500">
+      </div>
+      <div>
+        <button class="btn btn-gregslist-green" type="submit">
+          Submit
+        </button>
       </div>
     </div>
   </form>
